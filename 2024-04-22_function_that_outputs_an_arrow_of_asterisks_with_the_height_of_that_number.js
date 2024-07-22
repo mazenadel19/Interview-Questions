@@ -30,9 +30,9 @@ function printArrow(direction, number) {
     case "up":
       return printUp(number);
     case "down":
-        return printDown(number);
+      return printDown(number);
     default:
-        console.log("Invalid direction");
+      console.log("Invalid direction");
   }
 }
 

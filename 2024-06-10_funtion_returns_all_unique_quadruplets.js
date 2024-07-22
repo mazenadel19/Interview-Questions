@@ -26,13 +26,25 @@ function fourSum(array, target) {
       if (accumulator[diff]) {
         const pairs = accumulator[diff];
         for (const pair of pairs) {
-          const res = [firstNo, secondNo, pair[0], pair[1]].sort((a, b) => a - b);
-          if (pair[0] !== firstNo && pair[1] !== firstNo && pair[0] !== secondNo && pair[1] !== secondNo) {
+          const res = [firstNo, secondNo, pair[0], pair[1]].sort(
+            (a, b) => a - b
+          );
+          if (
+            pair[0] !== firstNo &&
+            pair[1] !== firstNo &&
+            pair[0] !== secondNo &&
+            pair[1] !== secondNo
+          ) {
             if (results.length) {
               for (const [no1, no2, no3, no4] of results) {
-                  const [ res1, res2, res3, res4 ] = res;
-                  console.log(res);
-                  if (no1 !== res1 && no2 !== res2 && no3 !== res3 && no4 !== res4) {
+                const [res1, res2, res3, res4] = res;
+                console.log(res);
+                if (
+                  no1 !== res1 &&
+                  no2 !== res2 &&
+                  no3 !== res3 &&
+                  no4 !== res4
+                ) {
                   results.push(res);
                 }
               }
@@ -42,5 +54,5 @@ function fourSum(array, target) {
       }
     }
   }
-//   console.log(results);
+  //   console.log(results);
 }

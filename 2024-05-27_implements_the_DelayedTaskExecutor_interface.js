@@ -33,9 +33,6 @@ function DelayedTaskExecutor() {
     exec(task) {
       const delay = task.timeStamp - Date.now();
       if (delay > 0) {
-        console.log(
-          `Task scheduled to run in ${Math.round(delay / 1000 / 60)} minuites.`
-        );
         setTimeout(() => task.run(), delay);
       } else {
         console.log("Timestamp is in the past. Task will not be executed.");

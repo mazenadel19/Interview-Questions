@@ -19,7 +19,6 @@ class FruitStand {
   }
 }
 
-
 // Create a new fruit stand
 let stand = new FruitStand();
 

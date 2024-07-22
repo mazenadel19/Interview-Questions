@@ -14,7 +14,7 @@ canPlantFlowers([1, 0, 1, 0, 1], 1);
 
 function canPlantFlowers(flowersArr, k) {
   let flowersToPlant = 0;
-  for (let i = 0; i < flowersArr.length;) {
+  for (let i = 0; i < flowersArr.length; ) {
     // if still two positions to plant a flower are left
     if (i + 1 < flowersArr.length) {
       // if neither has a flower

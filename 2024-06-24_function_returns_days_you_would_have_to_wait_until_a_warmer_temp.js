@@ -20,7 +20,9 @@ function dailyTemperatures(temperatures) {
         break;
       }
     }
-    results.push(higherTemperatureIndex === 0 ? 0 : higherTemperatureIndex - index);
+    results.push(
+      higherTemperatureIndex === 0 ? 0 : higherTemperatureIndex - index
+    );
   }
   console.log(results);
   return results;
