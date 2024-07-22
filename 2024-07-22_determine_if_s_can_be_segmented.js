@@ -8,11 +8,10 @@ console.log(wordBreak("aaaaaaaa", ["aa", "aaa"]));
 // true
 // "aaaaaaaa" can be segmented in multiple ways such as "aa aa aa aa" or "aaa aa aaa" where "aa" and "aaa" are in the dictionary.
 function wordBreak(word, segments) {
-    for (const segment of segments) {
-        const result = word.search(segment);
-        if (result === -1)
-            return false;
-        word = word.replace(segment, "");
-    }
-    return true;
+  for (const segment of segments) {
+    const result = word.search(segment);
+    if (result === -1) return false;
+    word = word.replace(segment, "");
+  }
+  return true;
 }

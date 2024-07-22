@@ -6,19 +6,18 @@
   "scripts": {
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "husky": {
-    "hooks": {
-      "pre-commit": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,css,scss,md}\" && git add ."
-    }
-  },
   "devDependencies": {
     "husky": "^9.1.1",
     "prettier": "^3.3.3",
     "typescript": "^5.4.5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": "prettier --write"
   }
 }
