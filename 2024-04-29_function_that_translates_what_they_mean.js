@@ -1,8 +1,8 @@
-//Imagine the users on your app are all typing slightly incorrectly, in that they shifted their hands one key to the right. 
+//Imagine the users on your app are all typing slightly incorrectly, in that they shifted their hands one key to the right.
 // Write a function that translates what they mean to say. The examples below assume an ANSI keyboard layout, you can choose how you want to do that!
 
 translateRightShift(';p; epeor')
-"lol wowie"
+// "lol wowie"
 
 translateRightShift('ejp s, o')
 // "who am i"
