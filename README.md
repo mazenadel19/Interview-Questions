@@ -4,4 +4,4 @@ Welcome to the repository for solving Cassidy Williams' weekly interview questio
 
 ## Structure
 
-Each coding challenge will be stored in a separate file, with the file name representing the question title and the date. For example, if there's a challenge titled "Determine the longest unique number" from April 15, 2024, the file name would be 2024-04-15_determine_the_longest_unique.
+Challenges are organized by year and date, with each stored in a directory named after the issue date. For example, a challenge titled 'Determine the longest unique number' from April 15, 2024, would be in the 2024/2024-04-15 directory.

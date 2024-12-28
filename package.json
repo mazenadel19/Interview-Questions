@@ -1,8 +1,7 @@
 {
   "name": "cassidy-interview-questions",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "solutions to cassidy williams coding challenges",
   "scripts": {
     "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
     "build": "tsc",
