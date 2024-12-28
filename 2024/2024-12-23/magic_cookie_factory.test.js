@@ -1,5 +1,5 @@
 import { it, expect } from "vitest";
-// import { countPerfectlyRoundCookies } from './magic_cookie_factory';
+import { countPerfectlyRoundCookies } from "./magic_cookie_factory";
 
 it("determine how many perfectly round cookies will be made when baking with n! ingredients.", () => {
   expect(countPerfectlyRoundCookies(5)).toBe(1);
