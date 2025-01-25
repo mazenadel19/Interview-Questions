@@ -2,31 +2,27 @@
 // where the difference between consecutive elements is either 1 or -1. Return the length of this subsequence.
 
 /**
- *
- * @param {number[]} sequeuences
+ * @param {number[]} sequences
  * @returns {number}
  */
-export function longestSubsequence(sequeuences) {
-    const longestCandidates = {};
-    for (let i = 0; i < sequeuences.length; i++) {
-        const nextEl = sequeuences[i + 1];
-        if (!nextEl) break;
+export function longestSubsequence(sequences) {
+    if (!sequences.length) return 0;
 
-        for (let j = i; j < sequeuences.length; j++) {
-            const nextEl = sequeuences[j + 1];
-            if (!nextEl) break;
-            const el = sequeuences[j];
-            const diff = nextEl - el;
-            if (Math.abs(diff) !== 1) break;
-            if (!longestCandidates[i]) longestCandidates[i] = [];
-            longestCandidates[i].push(el);
+    let maxLength = 1;
+    let currentLength = 1;
+
+    for (let i = 1; i < sequences.length; i++) {
+        const diff = Math.abs(sequences[i] - sequences[i - 1]);
+
+        if (diff === 1) {
+            currentLength++;
+            maxLength = Math.max(maxLength, currentLength);
+        } else {
+            currentLength = 1;
         }
     }
 
-    return Math.max(
-        ...Object.values(longestCandidates).map((c) => c.length + 1),
-        0
-    );
+    return maxLength;
 }
 
 longestSubsequence([1, 2, 3, 4, 5]);
