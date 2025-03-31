@@ -4,12 +4,10 @@ export function findLongestTimeGap(timestamps: string[]): number {
     if (timestamps.length === 1) return 0;
     const minStamps = timestamps.map((timestamp) => timeToMin(timestamp));
     const sortedMinStamps = minStamps.toSorted((a, b) => a - b);
-    const longestGap = sortedMinStamps.reduce((a, c, i) => {
-        if (sortedMinStamps[i - 1]) {
-            const diff = c - sortedMinStamps[i - 1];
-            a = diff > a ? diff : a;
-        }
-        return a;
+    const longestGap = sortedMinStamps.reduce((maxGap, currTime, i) => {
+        if (i === 0) return maxGap;
+        const diff = currTime - sortedMinStamps[i - 1];
+        return Math.max(maxGap, diff);
     }, 0);
     return longestGap;
 }
