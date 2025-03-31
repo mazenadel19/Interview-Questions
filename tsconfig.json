@@ -1,20 +1,25 @@
 {
-  "compilerOptions": {
-    /* Visit https://aka.ms/tsconfig to read more about this file */
+    "compilerOptions": {
+        /* Visit https://aka.ms/tsconfig to read more about this file */
 
-    /* Language and Environment */
-    "target": "es2016" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
+        /* Ensure TypeScript recognizes Vitest's types for auto-imports and type checking */
+        "types": ["vitest"],
 
-    /* Modules */
-    "module": "ES2022" /* Specify what module code is generated. */,
-    /* Interop Constraints */
-    "esModuleInterop": true /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
-    "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
+        /* Language and Environment */
+        "target": "es2023" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
 
-    /* Type Checking */
-    "strict": true /* Enable all strict type-checking options. */,
+        /* Modules */
+        "module": "ESNext" /* Use the latest ES module system for better compatibility with modern bundlers. */,
+        "moduleResolution": "Bundler" /* Optimize module resolution for bundlers like Vite and Webpack, avoiding Node.js-specific resolution. */,
 
-    /* Completeness */
-    "skipLibCheck": true /* Skip type checking all .d.ts files. */
-  }
+        /* Interop Constraints */
+        "esModuleInterop": true /* Enable interoperability between CommonJS and ES modules. */,
+        "forceConsistentCasingInFileNames": true /* Enforce consistent casing in module imports. */,
+
+        /* Type Checking */
+        "strict": true /* Enable all strict type-checking options for better type safety. */,
+
+        /* Completeness */
+        "skipLibCheck": true /* Skip type checking of declaration files to improve build performance. */
+    }
 }

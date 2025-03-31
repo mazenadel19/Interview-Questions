@@ -1,11 +1,6 @@
 // Write a function that takes an array of timestamps (HH:MM) from the same day and returns the longest gap in minutes between consecutive timestamps.
 
-/**
- *
- * @param {string[]} timestamps
- * @returns number
- */
-export function findLongestTimeGap(timestamps) {
+export function findLongestTimeGap(timestamps: string[]): number {
     if (timestamps.length === 1) return 0;
     const minStamps = timestamps.map((timestamp) => timeToMin(timestamp));
     const sortedMinStamps = minStamps.toSorted((a, b) => a - b);
@@ -18,12 +13,8 @@ export function findLongestTimeGap(timestamps) {
     }, 0);
     return longestGap;
 }
-/**
- *
- * @param {'HH:MM'} timestamp
- * @returns number
- */
-function timeToMin(timestamp) {
+
+function timeToMin(timestamp: string): number {
     const [hours, mins] = timestamp.split(":");
     return parseInt(hours) * 60 + parseInt(mins);
 }
